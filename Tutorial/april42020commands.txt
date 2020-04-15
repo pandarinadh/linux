@@ -1,0 +1,25 @@
+    1  wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+    2  sudo yum localinstall google-chrome-stable_current_x86_64.rpm
+    3  man wget
+    4  cat
+    5  ls
+    6  mkdir linux
+    7  cd linux
+    8  echo "hello" >> myfile.txt
+    9  cat myfile.txt 
+   10  echo "hello1" >> myfile.txt
+   11  cat myfile.txt 
+   12  echo "hello1" > myfile.txt
+   13  cat myfile.txt 
+   14  echo "hello1" >> myfile.txt
+   15  cat myfile.txt 
+   16  ip route show
+   17  yum dhclient
+   18  sudo dhclient
+   19  clear
+   20  netstat -i
+   21  systemd-resolve --status
+   22  systemd-resolved --status
+   23  nano myscript.sh
+   24  history 
+   25  history >> april42020commands.txt

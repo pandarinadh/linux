@@ -1,0 +1,114 @@
+    1  wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+    2  sudo yum localinstall google-chrome-stable_current_x86_64.rpm
+    3  man wget
+    4  cat
+    5  ls
+    6  mkdir linux
+    7  cd linux
+    8  echo "hello" >> myfile.txt
+    9  cat myfile.txt 
+   10  echo "hello1" >> myfile.txt
+   11  cat myfile.txt 
+   12  echo "hello1" > myfile.txt
+   13  cat myfile.txt 
+   14  echo "hello1" >> myfile.txt
+   15  cat myfile.txt 
+   16  ip route show
+   17  yum dhclient
+   18  sudo dhclient
+   19  clear
+   20  netstat -i
+   21  systemd-resolve --status
+   22  systemd-resolved --status
+   23  nano myscript.sh
+   24  history 
+   25  history >> april42020commands.txt
+   26  cat april42020commands.txt 
+   27  ls
+   28  ls --a
+   29  ls -a
+   30  ls --all
+   31  cd linux
+   32  cd ..
+   33  ip addr
+   34  clear
+   35  ls -l
+   36  ls
+   37  history
+   38  cd linux
+   39  touch my file changes
+   40  ls
+   41  rm changes 
+   42  ls
+   43  rm file 
+   44  rm my
+   45  ls
+   46  pwd
+   47  clear
+   48  pwd
+   49  cd..
+   50  cd
+   51  pwd
+   52  cd home
+   53  cd /home
+   54  dir
+   55  ls
+   56  cd pandarinadh/
+   57  cd linux/
+   58  mkdir data
+   59  cd data/
+   60  nano file1
+   61  ls
+   62  cat file1 
+   63  clear
+   64  touch file2
+   65  touch file3
+   66  touch file4
+   67  touch file5
+   68  ls
+   69  mkdir newdata
+   70  cd newdata/
+   71  cd
+   72  ls
+   73  cd linux
+   74  ls
+   75  cd data
+   76  cp file* newdata/
+   77  cd newdata/
+   78  ls
+   79  rm file?
+   80  ls
+   81  cd
+   82  cd linux/
+   83  cd data/
+   84  ls
+   85  cd newdata/
+   86  mv ../file* .
+   87  ls
+   88  cd
+   89  locate adduser
+   90  sudo update
+   91  yum update
+   92  yum updatedb
+   93  sudo updatedb
+   94  cat /etc/group | grep centos
+   95  cat /etc/group | grep cen
+   96  head /etc/group
+   97  tail /etc/group
+   98  cat /etc/group | grep pandarinadh
+   99  history
+  100  lsusb
+  101  ls /lib/modules/
+  102  ls /lib/modules/`uname -r`
+  103  ls /lib/modules/`uname -r`/kernel
+  104  cd /lib/modules/`uname -r`/kernel
+  105  ls
+  106  cd sound/
+  107  ls
+  108  clear
+  109  lsmod  | grep sound
+  110  modprobe soundcore
+  111  history
+  112  cd
+  113  cd linux/
+  114  history >> apr152020Commands.txt
