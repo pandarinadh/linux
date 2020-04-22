@@ -1,1 +1,18 @@
 to end the less command, press q letter
+
+to install container 
+
+sudo lxc launch images:centos/7/amd64 centos7
+ sudo lxc list
+
+ snap install nextcloud
+
+  111  clear
+  112  cd /var/snap
+  113  ls
+  114  cd nextcloud/
+  115  ls
+  116  cd 20007/
+  117  ls
+  118  history 
+
