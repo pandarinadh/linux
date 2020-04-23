@@ -1,0 +1,183 @@
+df -ht ext4
+sudo apt install iftop
+ip addr
+sudo iftop -i 
+
+04/23/2020
+
+cd /proc - virtual directory
+meminfo contains capacity and usage levels
+cpuinfo - everything about cpu and usage levels of CPU
+top - provides the all process running currently
+free -h show the memory details
+df shows all the partitiions including virtual 
+df -ht ext4 shows the system partition
+dslreports.com - to test the bandwidth
+
+sudo apt update
+sudo apt install iftop - networking conversion of the top and bandwidth
+
+ip addr - network interface
+
+sudo iftop -i <name> shows the network bandwidth and usage
+
+ps 
+	- two process running
+ps aux 
+	providing all the process across the system
+ps aux | wc 
+	- gives lines
+ps aux | grep sshd
+	shows sshd related process
+man sshd
+ shows the manual
+ 
+journalctl --since "10 minutes ago"
+
+cd /var/log - shows the all logs
+	auth.log - authentication errors 
+	dpkg.log - 
+	kern.log kernal shows
+	.gz files older messages
+	deleted automatically
+	syslog - latest log files you can do grep
+
+dmesg
+	messages comes from kernal ring buffer like adding new usb drive
+
+yes > /dev/null & - to create a process
+kill <processid> 
+	kills the process
+
+killall <processname> 
+	will kill all the process in the system.
+
+sudo systemctl status <name> - 
+
+sudo systemctl disable <name> 
+	to disable the process
+
+sudo systemctl enable <name>
+	to enable the process
+
+
+sudo systemctl start 
+
+nice -19 yes > /dev/null & 	
+	this command basically puts the process to run slow and at the end.
+renice 15 -p <processid>
+	to change the process order.
+	
+	renice 15 -p 13819
+	renice: failed to set priority for 13819 (process ID): Permission denied
+	sudo renice 15 -p 13819 
+		if you put sudo in front of command, it lets you access.
+
+
+	
+Use groups
+	less /etc/shadow
+	- permission denied
+	sudo less /etc/shadow
+		runs under amin account.
+	less /etc/passwd
+		passwords
+	less /etc/group
+id pandarinadh
+	returns group id and member
+who
+	gives the current user info
+w 
+	gives the list who logged in 
+	and what they are doing
+last | less	
+
+adding user
+	sudo useradd -m anish
+
+cd /home/anish
+   to access newly created user
+  ls -a
+    gives hidden files
+cd /etc/skel/
+ ls -a
+ 
+ sudo passwd anish	
+	to set the passwords
+	
+sudo mkdir /var/secret
+sudo groupadd secret-group
+	adding security group
+sudo chown :secret-group /var/secret/
+adding the group secret-group to secret folder
+sudo usermod -a -G secret-group anish (a means add, -G exising group)
+sudo chmod g+w /var/secret/ (g means group, w - write)
+	allow group members to edit files
+	
+cd /var/secret/
+ls
+su anish	
+	to login with anish user
+
+ touch /var/log/data.txt
+touch: cannot touch '/var/log/data.txt': Permission denied
+	anish does not have permission to create a file in /var/log/ directory
+ls -l 
+	display file attributes
+	
+-rw-rw-r-- 1 anish anish 0 Apr 23 14:34 data.txt
+	first anish the owner
+	next anish the one who created.
+
+-rw-rw-r-- 1  - means executable other wise x, r read w write
+	first 3 object owner 
+	second 3 permissions of owning group
+	third 3 other people not in the group 
+
+ls -dl 
+	display directory content
+	drwxrwxr-x 2 root secret-group 4096 Apr 23 14:34
+
+chmod o+x data.txt o means others - x executable
+	changing the permission to executable for others
+	-rw-rw-r-x 1 anish anish 0 Apr 23 14:34 data.txt
+
+chmod 777 data.txt
+	- first 7 - rwx - owner
+	-second 7 - rwx -group
+	-third 7 - rwx -others
+
+ls -dl
+  drwxrwxr-x 2 root secret-group 4096 Apr 23 14:34 .
+ 
+sudo chmod +s /var/secret s means sticky 
+	so that other users in the group can delete but owner can delete 
+	- other membes in teh group can not delete the other owner file 
+	drwsrwsr-x 2 root secret-group 4096 Apr 23 14:34 .
+symbolic links
+
+sudo ln -s /Documents/data/myscript.sh /var/secret
+padnarinadh@ubuntu:~/Documents/data$ sudo ln -s /Documents/data/myscript.sh /var/secret
+padnarinadh@ubuntu:~/Documents/data$ ls -l
+
+
+
+padnarinadh@ubuntu:/var/secret$ ls -l
+total 0
+-rwxr-xr-x 1 anish anish         0 Apr 23 14:34 data.txt
+lrwxrwxrwx 1 root  secret-group 27 Apr 23 14:58 myscript.sh -> /Documents/data/myscript.sh
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
