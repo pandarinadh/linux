@@ -1,0 +1,55 @@
+To setup centos - get the centos from the site 
+http://ftp.osuosl.org/pub/centos-altarch/7.8.2003/isos/i386/
+	CentOS-7-i386-Minimal-2003.iso download this
+
+2 install oracle vm virtual box manager
+
+3. to setup, setup the netwokrs.
+    File -> Preferences -> Networks -> add network - NAT Network.
+
+4. Click New
+    Name - server1
+    Operating system - Linux
+    version - Red Hat 64
+
+5 click on the Networks
+Adapter 1 - select Nat Network -> NatNetwork
+Adapter 2 -> select Host Only Adapter 
+
+6. Click on the Storage 
+    select the dowloaded file 
+
+7. start the server
+
+8. select the language
+
+9. select other ones
+
+10. select Network & Host Name
+    Enable both Network
+    Host name = server1.example.com
+
+11. set the root and user
+
+12 ip a s
+
+13. nmcli conn show #to show the network connections
+
+14 nmcli conn up enp0s3
+
+15 nmcli conn up enp0s8
+
+16. To change the boot 
+    sed -i s/ONBOOT=no/ONBOOT=yes/ /etc/sysconfig/network-scripts/ifcfg-enp0s3
+    sed -i s/ONBOOT=no/ONBOOT=yes/ /etc/sysconfig/network-scripts/ifcfg-enp0s8
+17 to confirm the change
+
+18 gerep ONBOOT !$ 
+    # !$ - LAST PATH File
+19.yum update 
+# to update the system
+
+
+
+
+
