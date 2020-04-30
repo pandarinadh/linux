@@ -44,11 +44,31 @@ Adapter 2 -> select Host Only Adapter
     sed -i s/ONBOOT=no/ONBOOT=yes/ /etc/sysconfig/network-scripts/ifcfg-enp0s8
 17 to confirm the change
 
-18 gerep ONBOOT !$ 
+18 grep ONBOOT !$ 
     # !$ - LAST PATH File
 19.yum update 
 # to update the system
 
+
+20.yum install -y redhat-lsb-core net-tools epel-release kernel-headers kernel-devel
+
+21. yum groupinstall -y "Development Tools"
+
+22 yum groupinstall -y " X Window System" "MATE Desktop"
+
+23 systemctl set-default graphical.target
+
+24 systemctl isolate graphical.target
+
+25 to install guest additions
+
+26 su - 
+# root access
+
+27 mount
+
+
+28/run/media/pandarinadh/VBox.../VBoxLin....run
 
 
 
