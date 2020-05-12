@@ -1,0 +1,97 @@
+graphical interface Display manager
+
+in terminal
+
+ctrl shift + # to make fount size bigger
+
+ctrl d #to close the terminal console
+
+pwd # present directory
+
+right ctrl F2 #to take to tty2
+
+right ctrl F1 # TO TAKE TO GRAPHICAL
+
+who # who logged into the system
+
+tty #terminal console
+
+ctrl l # to clear the console screen
+
+type ls # provides the actual command
+
+ls -aF #to list the forward /
+
+ls -F /etc # to show type of the files
+
+ls -l /etc # permission and long list
+
+ ls -lrt /etc #l long list r reverse t timestamp
+
+  ls -lhrt /etc  #h readable size
+
+  ls -ld /etc #directory info
+
+ ls -l /dev/pts/1 -
+
+ crw--w----. 1 pandarinadh tty 136, 1 May 12  2020 /dev/pts/1
+ character device
+
+ ls -l $(tty) #$(tty) puts the command tty.
+
+ ls -l /dev/sda # b means block device
+brw-rw----. 1 root disk 8, 0 May 12 15:57 /dev/sda
+
+
+ls -l /dev/sda* # * show sda anything that follows
+
+ls -l /dev/sda? # ? single character
+
+
+ ls -l /dev/sda[12] # 1 or 2
+
+all device files are under /dev directory.
+
+cat /etc/system-release
+    CentOS Linux release 7.8.2003 (Core)
+
+lsb_release -d # 
+    Description:    CentOS Linux release 7.8.2003 (Core)
+
+ ls -l $(which lsb_release) #it shows in the green that means executable
+    -rwxr-xr-x. 1 root root 15929 Mar 27  2015 /usr/bin/lsb_release
+
+ ls -lF $(which lsb_release) # * means executable
+-rwxr-xr-x. 1 root root 15929 Mar 27  2015 /usr/bin/lsb_release*
+
+rpm -qf /usr/bin/lsb_release #q query f file , rpm mean packages comes from
+redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+
+ rpm -qf $(which lsb_release) # short cut to above command
+redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
